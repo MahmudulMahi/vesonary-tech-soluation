@@ -1,10 +1,12 @@
 
-import { NavLink } from 'react-router-dom';
+import { NavLink, useLocation } from 'react-router-dom';
 import { TbWorld } from "react-icons/tb";
 import { useEffect, useState } from 'react';
-import logo from '/asset/Group 527.png'
+import logo from '/public/asset/Group 527.png'
 
 const Header = () => {
+
+  const location = useLocation();
 
   const [theme,setTheme]=useState(localStorage.getItem("theme")? localStorage.getItem("theme"):"light")
 
@@ -22,6 +24,8 @@ const Header = () => {
     document.querySelector('html').setAttribute('data-theme',localTheme)
   },[theme])
 
+ 
+
   return (
     <div className="navbar bg-base-100">
       <div className="navbar-start">
@@ -30,35 +34,41 @@ const Header = () => {
             <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
           </label>
           <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
-            <li><NavLink to="/" >Home</NavLink></li>
-            <li>
+            <li >
+              <NavLink to="/" >Home</NavLink></li>
+            <li><NavLink to="/services">services & Project</NavLink></li>
+            {/* <li>
               <a to="services">services</a>
               <ul className="p-2">
                 <li><a>Submenu 1</a></li>
                 <li><a>Submenu 2</a></li>
               </ul>
-            </li>
+            </li> */}
             <li><NavLink to="/team">Team</NavLink></li>
-            <li><NavLink to="/project">Project</NavLink></li>
+            
             <li><NavLink to="/about">About</NavLink></li>
             <li><NavLink to="/contact">Contact</NavLink></li>
           </ul>
         </div>
         <div className='flex '>
           <div>
-          <img className='lg:ml-10' src={logo} alt="" />
+          <img className='ml-1 lg:ml-10 mt-3 md:mt-0 hidden md:block' src={logo} alt="" />
           </div>
-          <div className='ml-3'>
+          <div className='ml-1 lg:ml-5'>
             <h2 className='text-xl'>Visionary</h2>
             <p className='text-xs mt-1'>Tech Solution</p>
           </div>
         </div>
       </div>
-      <div className="navbar-center hidden lg:flex">
-        <ul className="menu menu-horizontal px-1">
-          <li><NavLink to="/">Home</NavLink></li>
+      <div className="navbar-center hidden lg:flex ">
+        <ul className=" gap-10 menu-horizontal px-1 ">
+          <li className={` ${location.pathname === '/' ? 'border-b-4 border-blue-700' : ''}`} >
+            
+            <NavLink to="/">Home</NavLink></li>
+          <li className={` ${location.pathname === '/services' ? 'border-b-4 border-blue-500' : ''}`} >
+            <NavLink to="/services">services & Project</NavLink></li>
 
-          <li tabIndex={0}>
+          {/* <li tabIndex={0}>
             <details>
               <summary>services</summary>
               <ul className="p-2">
@@ -66,11 +76,14 @@ const Header = () => {
                 <li><a>Submenu 2</a></li>
               </ul>
             </details>
-          </li>
-          <li><NavLink to="/team">Team</NavLink></li>
-          <li><NavLink to="/project">Project</NavLink></li>
-          <li><NavLink to="/about">About</NavLink></li>
-          <li><NavLink to="/contact">Contact</NavLink></li>
+          </li> */}
+          <li className={` ${location.pathname === '/team' ? 'border-b-4 border-blue-700' : ''}`}>
+            <NavLink to="/team">Team</NavLink></li>
+        
+          <li className={` ${location.pathname === '/about' ? 'border-b-4 border-blue-700' : ''}`}>
+            <NavLink to="/about">About</NavLink></li>
+          <li className={` ${location.pathname === '/contact' ? 'border-b-4 border-blue-700' : ''}`}>
+            <NavLink to="/contact">Contact</NavLink></li>
 
 
         </ul>
@@ -88,7 +101,7 @@ const Header = () => {
 
         <div className=' flex items-center gap-5'>
           <TbWorld className='text-2xl'></TbWorld>
-          <label className="swap swap-rotate mr-5 ">
+          <label className="swap swap-rotate mr-0  md:mr-5  ">
 
           
             <input type="checkbox" onChange={handleToggle} />

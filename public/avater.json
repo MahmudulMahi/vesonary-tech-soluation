@@ -1,0 +1,52 @@
+[
+  {
+      "id": 1,
+      "name": "HTML 5",
+      "thumbnail":"https://i.ibb.co/Lx17RJF/19.png",
+      "image": "https://i.ibb.co/Rgb4qxm/Group-529-1.png"
+  },
+  {
+      "id": 2,
+      "name": "CSS 3",
+      "thumbnail":"https://i.ibb.co/Lx17RJF/19.png",
+      "image": "https://i.ibb.co/v1wvky0/Group-224.png"
+  },
+  {
+      "id": 3,
+      "name": "Bootstrap 3",
+      "thumbnail":"https://i.ibb.co/Lx17RJF/19.png",
+      "image": "https://i.ibb.co/zrLcJ27/Group-228.png"
+  },
+  {
+      "id": 4,
+      "name": "Python 3",
+      "thumbnail":"https://i.ibb.co/Lx17RJF/19.png",
+      "image": " https://i.ibb.co/Zh22KZ1/Python-logo-notext-svg.png"
+  },
+  {
+      "id": 5,
+      "name": "django",
+      "thumbnail":"https://i.ibb.co/Lx17RJF/19.png",
+      "image": "https://i.ibb.co/xC90k8z/2560px-Django-logo-svg.png"
+  },
+  {
+      "id": 6,
+      "name": "React",
+      "thumbnail":"https://i.ibb.co/Lx17RJF/19.png",
+      "image": "https://i.ibb.co/yWHrFTg/React-icon-svg.png"
+  },
+  {
+      "id": 7,
+      "name": "Next",
+      "thumbnail":"https://i.ibb.co/Lx17RJF/19.png",
+      "image": "https://i.ibb.co/kJp9k4n/nestjs-1.png"
+  },
+  {
+      "id": 8,
+      "name": "Node Js",
+      "thumbnail":"https://i.ibb.co/Lx17RJF/19.png",
+      "image": "https://i.ibb.co/WxBGmM6/1200px-Node-js-logo-svg.png"
+  }
+
+
+]
