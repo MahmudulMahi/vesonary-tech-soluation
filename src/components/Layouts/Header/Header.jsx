@@ -68,7 +68,15 @@ const Header = () => {
           <li className={` ${location.pathname === '/services' ? 'border-b-4 border-blue-500' : ''}`} >
             <NavLink to="/services">services & Project</NavLink></li>
 
-        
+          {/* <li tabIndex={0}>
+            <details>
+              <summary>services</summary>
+              <ul className="p-2">
+                <li><a>Submenu 1</a></li>
+                <li><a>Submenu 2</a></li>
+              </ul>
+            </details>
+          </li> */}
           <li className={` ${location.pathname === '/team' ? 'border-b-4 border-blue-700' : ''}`}>
             <NavLink to="/team">Team</NavLink></li>
         
